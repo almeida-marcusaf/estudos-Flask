@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block title %}
+	index	
+{% endblock %}
+{% block content %}
+	<h1>Login</h1>
+	{{error}}
+	<form method='post'>
+		<p>
+			<input type='text' name='username' placeholder='Nome do usuario'>
+			<input type='password' name='keyword' placeholder='Senha do usuario'>
+			<input type='submit' name='submit' value='Entrar'>		
+		</p>					
+	</form>
+{% endblock %}

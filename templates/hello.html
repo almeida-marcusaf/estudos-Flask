@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}
+	hello	
+{% endblock %}
+{% block content %}
+	<h1>Welcome {{name}}</h1>
+	<ul>
+		{% for item in items %}
+			<li>
+				{% if item=='banana' %}
+					<h2>{{item}}</h2>
+				{% else %}
+					{{item}}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
