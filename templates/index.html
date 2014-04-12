@@ -2,6 +2,16 @@
 {% block title %}
 	index	
 {% endblock %}
+
 {% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 	<h1>Pagina principal</h1>
 {% endblock %}
