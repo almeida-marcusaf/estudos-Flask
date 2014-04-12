@@ -12,8 +12,13 @@ def cookie():
 	username = request.cookies.get('username')
 	return render_template('index.html')
 
+@app.route('/volta')
+def volta_cookie():
+    cookie = request.cookies.get('grupython')
+    return cookie
+
 @app.route('/cookie2')
-def cookie2():	
+def cookie2():
 	resp = make_response(render_template('index.html'))
 	resp.set_cookie('grupython', 'ufla')
 	return resp
